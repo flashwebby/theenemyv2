@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Enemy - Interactive Presentation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f3f4f6;
+      color: #333;
+    }
+    h1, h2, h3 {
+      font-family: 'Lora', serif;
+      color: #2c3e50;
+    }
+    .slide {
+      display: none; /* Hide all slides by default */
+      position: absolute;
+      inset: 0;
+      overflow-y: auto; /* Allow scrolling on long slides */
+    }
+    .slide.active {
+      display: flex; /* Changed to flex for centering */
+      align-items: center; /* Center vertically */
+      justify-content: center; /* Center horizontally */
+    }
+  </style>
+</head>
+<body>
+  <div id="app" class="min-h-screen">
+    <nav class="bg-white shadow-md p-4 fixed top-0 left-0 right-0 z-10">
+      <div class="container mx-auto flex justify-center space-x-6">
+        <a href="#" data-slide="0" class="text-gray-700 hover:text-gray-900 font-medium">Introduction</a>
+        <a href="#" data-slide="1" class="text-gray-700 hover:text-gray-900 font-medium">Chapter Summaries</a>
+        <a href="#" data-slide="24" class="text-gray-700 hover:text-gray-900 font-medium">Character Sketch</a>
+      </div>
+    </nav>
+    <div class="relative w-full mt-16 overflow-hidden" style="height: calc(100vh - 4rem);">
+      <!-- Slide 0: Introduction -->
+      <section id="slide-0" class="slide active p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h1 class="text-4xl font-bold mb-4 text-gray-900 text-center">The Enemy by Pearl S. Buck</h1>
+          <p class="text-lg text-gray-700 text-center max-w-2xl mx-auto">Set during World War II, this chapter explores a Japanese doctor's moral dilemma when an American prisoner of war washes ashore near his home.</p>
+        </div>
+      </section>
+
+      <!-- Slide 1: Page 1 Summary -->
+      <section id="slide-1" class="slide p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900 text-center">Page 1 Summary</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-4">
+            <li>Dr. Sadao Hoki's house is built on the Japanese coast.</li>
+            <li>Sadao played on the coast as a child.</li>
+            <li>HisVisitor father saw the nearby islands as Japan’s future stepping stones.</li>
+            <li>Sadao’s education was his father’s top priority.</li>
+            <li>Sadao was sent to America at age twenty-two to study surgery.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold mb-2 text-gray-800 text-center">Tough Words</h3>
+          <ul class="list-disc pl-5 text-gray-700">
+            <li><strong>render</strong>: To make or cause to become</li>
+            <li><strong>wounds</strong>: Injuries to the body</li>
+            <li><strong>troops</strong>: Groups of soldiers</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 2: Page 2 Summary -->
+      <section id="slide-2" class="slide p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900 text-center">Page 2 Summary</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-4">
+            <li>Sadao studied surgery and medicine in America.</li>
+            <li>He became a renowned surgeon and scientist.</li>
+            <li>He stayed in Japan due to his wound-cleaning discovery.</li>
+            <li>The General might need an operation, influencing his stay.</li>
+            <li>He met Hana in America and married her after verifying her heritage.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold mb-2 text-gray-800 text-center">Tough Words</h3>
+          <ul class="list-disc pl-5 text-gray-700">
+            <li><strong>perfecting</strong>: Improving to be flawless</li>
+            <li><strong>abroad</strong>: In a foreign country</li>
+            <li><strong>voluble</strong>: Talkative</li>
+          </ul>
+        </div>
+      </section>
+      
+      <!-- Slide 3: Page 3 Summary -->
+      <section id="slide-3" class="slide p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900 text-center">Page 3 Summary</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-4">
+            <li>Sadao and Hana see a man emerge from the sea.</li>
+            <li>The man is injured and crawling toward them.</li>
+            <li>They rush to assist, suspecting he’s a fisherman.</li>
+            <li>The rocky coast suggests how he was washed ashore.</li>
+            <li>The man collapses, revealing severe wounds.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold mb-2 text-gray-800 text-center">Tough Words</h3>
+          <ul class="list-disc pl-5 text-gray-700">
+            <li><strong>breaker</strong>: A large wave</li>
+            <li><strong>staggered</strong>: Walked unsteadily</li>
+            <li><strong>surf</strong>: Waves breaking on the shore</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 4: Page 4 Summary -->
+      <section id="slide-4" class="slide p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900 text-center">Page 4 Summary</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-4">
+            <li>The man is revealed as a white American.</li>
+            <li>He has a reopened gunshot wound with powder marks.</li>
+            <li>Sadao instinctively starts treating the wound.</li>
+            <li>They consider returning him to the sea but pause.</li>
+            <li>The man remains unconscious during their aid.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold mb-2 text-gray-800 text-center">Tough Words</h3>
+          <ul class="list-disc pl-5 text-gray-700">
+            <li><strong>tortured</strong>: Showing signs of suffering</li>
+            <li><strong>stanch</strong>: Stop the flow of (e.g., blood)</li>
+            <li><strong>stupor</strong>: A state of reduced consciousness</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 5: Page 5 Summary -->
+      <section id="slide-5" class="slide p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900 text-center">Page 5 Summary</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-4">
+            <li>The man is identified as an escaped U.S. Navy sailor.</li>
+            <li>Sadao and Hana debate his fate.</li>
+            <li>They feel repulsed but can’t abandon him.</li>
+            <li>They decide to take him into their house.</li>
+            <li>They intend to turn him over to authorities later.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold mb-2 text-gray-800 text-center">Tough Words</h3>
+          <ul class="list-disc pl-5 text-gray-700">
+            <li><strong>resolution</strong>: Firm decision</li>
+            <li><strong>inert</strong>: Motionless</li>
+            <li><strong>fowl</strong>: A bird, often poultry</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 6: Page 6 Summary -->
+      <section id="slide-6" class="slide p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900 text-center">Page 6 Summary</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-4">
+            <li>They carry the man to Sadao’s father’s old bedroom.</li>
+            <li>The room is traditional and unused since his father’s death.</li>
+            <li>Hana hesitates to use a quilt due to the man’s dirtiness.</li>
+            <li>Sadao plans to wash and operate on the man.</li>
+            <li>Hana worries about the consequences of his survival.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold mb-2 text-gray-800 text-center">Tough Words</h3>
+          <ul class="list-disc pl-5 text-gray-700">
+            <li><strong>quilt</strong>: A thick blanket</li>
+            <li><strong>vitality</strong>: Energy or life force</li>
+            <li><strong>distress</strong>: Extreme anxiety or pain</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 7: Page 7 Summary -->
+      <section id="slide-7" class="slide p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900 text-center">Page 7 Summary</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-4">
+            <li>Hana asks servant Yumi to wash the man.</li>
+            <li>Yumi refuses, rejecting helping a white man.</li>
+            <li>The gardener warns of revenge if the man is healed.</li>
+            <li>The servants show fear and superstition.</li>
+            <li>Hana remains polite but firm with them.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold mb-2 text-gray-800 text-center">Tough Words</h3>
+          <ul class="list-disc pl-5 text-gray-700">
+            <li><strong>bluntly</strong>: Directly and plainly</li>
+            <li><strong>superstitious</strong>: Believing in supernatural influences</li>
+            <li><strong>stubbornness</strong>: Refusal to change</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 8: Page 8 Summary -->
+      <section id="slide-8" class="slide p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900 text-center">Page 8 Summary</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-4">
+            <li>Hana washes the man herself after Yumi refuses.</li>
+            <li>Sadao gathers surgical tools for the operation.</li>
+            <li>Hana notes the man’s fine skin while cleaning him.</li>
+            <li>Sadao prepares the bedroom as an operating space.</li>
+            <li>The man’s wound requires urgent surgery.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold mb-2 text-gray-800 text-center">Tough Words</h3>
+          <ul class="list-disc pl-5 text-gray-700">
+            <li><strong>impulsively</strong>: Acting without forethought</li>
+            <li><strong>texture</strong>: The feel or appearance of a surface</li>
+            <li><strong>sterilized</strong>: Made free of germs</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 9: Page 9 Summary -->
+      <section id="slide-9" class="slide p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900 text-center">Page 9 Summary</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-4">
+            <li>Sadao starts surgery, locating a deep bullet.</li>
+            <li>Hana assists despite her fear of blood.</li>
+            <li>The wound’s blood stains the floor mat.</li>
+            <li>Sadao works with focus and expertise.</li>
+            <li>The man’s survival hinges on the operation.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold mb-2 text-gray-800 text-center">Tough Words</h3>
+          <ul class="list-disc pl-5 text-gray-700">
+            <li><strong>matting</strong>: Material used as a covering</li>
+            <li><strong>anesthetic</strong>: A substance that numbs pain</li>
+            <li><strong>superficial</strong>: On the surface only</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 10: Page 10 Summary -->
+      <section id="slide-10" class="slide p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900 text-center">Page 10 Summary</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-4">
+            <li>Hana faints but recovers to assist Sadao.</li>
+            <li>Sadao removes the bullet amid personal conflict.</li>
+            <li>The man shows faint signs of life post-surgery.</li>
+            <li>Sadao feels pride in the successful operation.</li>
+            <li>Hana is relieved yet anxious about the future.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold mb-2 text-gray-800 text-center">Tough Words</h3>
+          <ul class="list-disc pl-5 text-gray-700">
+            <li><strong>retching</strong>: Vomiting or gagging</li>
+            <li><strong>ruthless</strong>: Without mercy</li>
+            <li><strong>intricate</strong>: Complex or detailed</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 11: Page 11 Summary -->
+      <section id="slide-11" class="slide p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900 text-center">Page 11 Summary</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-4">
+            <li>Sadao skillfully extracts the bullet.</li>
+            <li>Hana sees scars on the man’s neck.</li>
+            <li>The man mutters in English, proving he’s alive.</li>
+            <li>Sadao recalls his American medical training.</li>
+            <li>The surgery succeeds, saving the man’s life.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold mb-2 text-gray-800 text-center">Tough Words</h3>
+          <ul class="list-disc pl-5 text-gray-700">
+            <li><strong>probed</strong>: Explored or examined</li>
+            <li><strong>incisions</strong>: Surgical cuts</li>
+            <li><strong>contradicted</strong>: Opposed or denied</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 12: Page 12 Summary -->
+      <section id="slide-12" class="slide p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900 text-center">Page 12 Summary</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-4">
+            <li>The man awakens, scared and weak.</li>
+            <li>Hana feeds him and offers comfort.</li>
+            <li>Sadao advises the man to rest and recover.</li>
+            <li>The man fears being handed to the police.</li>
+            <li>Sadao remains uncertain about his next step.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold mb-2 text-gray-800 text-center">Tough Words</h3>
+          <ul class="list-disc pl-5 text-gray-700">
+            <li><strong>hypodermic</strong>: A syringe for injection</li>
+            <li><strong>perceived</strong>: Became aware of</li>
+            <li><strong>compelled</strong>: Forced or urged</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 13: Page 13 Summary -->
+      <section id="slide-13" class="slide p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900 text-center">Page 13 Summary</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-4">
+            <li>The man, Tom, asks about his fate.</li>
+            <li>Servants resent hiding an American.</li>
+            <li>They accuse Sadao and Hana of treason.</li>
+            <li>Sadao defends his actions as a doctor’s duty.</li>
+            <li>Tension in the household escalates.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold mb-2 text-gray-800 text-center">Tough Words</h3>
+          <ul class="list-disc pl-5 text-gray-700">
+            <li><strong>scolded</strong>: Reprimanded</li>
+            <li><strong>brusquely</strong>: Abruptly or rudely</li>
+            <li><strong>watchful</strong>: Alert and observant</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 14: Page 14 Summary -->
+      <section id="slide-14" class="slide p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900 text-center">Page 14 Summary</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-4">
+            <li>Servants condemn Sadao for saving an enemy.</li>
+            <li>Tom shares his name, but Hana stays aloof.</li>
+            <li>The servants quit, fearing legal repercussions.</li>
+            <li>Hana manages their exit gracefully.</li>
+            <li>Sadao begins a police report but stops.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold mb-2 text-gray-800 text-center">Tough Words</h3>
+          <ul class="list-disc pl-5 text-gray-700">
+            <li><strong>contemptuously</strong>: With scorn</li>
+            <li><strong>condemned</strong>: Sentenced or denounced</li>
+            <li><strong>assuage</strong>: Ease or relieve</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 15: Page 15 Summary -->
+      <section id="slide-15" class="slide p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900 text-center">Page 15 Summary</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-4">
+            <li>Sadao and Hana cope without servants.</li>
+            <li>Sadao pushes Tom to recover quickly.</li>
+            <li>A messenger arrives, initially alarming Hana.</li>
+            <li>It’s a call for the General’s care, not arrest.</li>
+            <li>Sadao vows to resolve the issue for Hana.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold mb-2 text-gray-800 text-center">Tough Words</h3>
+          <ul class="list-disc pl-5 text-gray-700">
+            <li><strong>dismayed</strong>: Shocked or discouraged</li>
+            <li><strong>grieving</strong>: Feeling deep sorrow</li>
+            <li><strong>unaccustomed</strong>: Not used to</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 16: Page 16 Summary -->
+      <section id="slide-16" class="slide p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900 text-center">Page 16 Summary</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-4">
+            <li>Sadao visits the General, valued for his skill.</li>
+            <li>The General jests about balancing ruthlessness and emotion.</li>
+            <li>Hana fears arrest until the true purpose is clear.</li>
+            <li>The General proposes assassins to kill Tom.</li>
+            <li>Sadao agrees, keeping it secret from Hana.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold mb-2 text-gray-800 text-center">Tough Words</h3>
+          <ul class="list-disc pl-5 text-gray-700">
+            <li><strong>indispensable</strong>: Absolutely necessary</li>
+            <li><strong>sentimentality</strong>: Excessive emotion</li>
+            <li><strong>exclaimed</strong>: Cried out suddenly</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 17: Page 17 Summary -->
+      <section id="slide-17" class="slide p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900 text-center">Page 17 Summary</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-4">
+            <li>The General plans silent assassins for Tom.</li>
+            <li>Sadao sees it as a way to protect his family.</li>
+            <li>He returns home, justifying the decision.</li>
+            <li>The General promises to handle the body.</li>
+            <li>Sadao expects the plan to unfold soon.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold mb-2 text-gray-800 text-center">Tough Words</h3>
+          <ul class="list-disc pl-5 text-gray-700">
+            <li><strong>assassins</strong>: Professional killers</li>
+            <li><strong>irritably</strong>: In an annoyed manner</li>
+            <li><strong>timid</strong>: Shy or fearful</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 18: Page 18 Summary -->
+      <section id="slide-18" class="slide p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900 text-center">Page 18 Summary</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-4">
+            <li>Tom is up, feeling better and chatty.</li>
+            <li>He thanks Sadao for saving his life.</li>
+            <li>Sadao sleeps poorly, awaiting assassins.</li>
+            <li>Tom is still alive the next day, surprising Sadao.</li>
+            <li>Sadao helps Tom back to bed, hiding his plan.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold mb-2 text-gray-800 text-center">Tough Words</h3>
+          <ul class="list-disc pl-5 text-gray-700">
+            <li><strong>gaunt</strong>: Thin and bony</li>
+            <li><strong>stubbly</strong>: Short and rough</li>
+            <li><strong>rustling</strong>: Soft, muffled sounds</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 19: Page 19 Summary -->
+      <section id="slide-19" class="slide p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900 text-center">Page 19 Summary</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-4">
+            <li>Sadao and Hana wait nervously for assassins.</li>
+            <li>A noise alarms them, but Sadao stops Hana from looking.</li>
+            <li>Tom remains alive and increasingly cheerful.</li>
+            <li>Sadao decides to arrange Tom’s escape.</li>
+            <li>He plans a boat escape to a nearby island.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold mb-2 text-gray-800 text-center">Tough Words</h3>
+          <ul class="list-disc pl-5 text-gray-700">
+            <li><strong>partition</strong>: A divider or screen</li>
+            <li><strong>boughs</strong>: Tree branches</li>
+            <li><strong>strain</strong>: Stress or tension</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 20: Page 20 Summary -->
+      <section id="slide-20" class="slide p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900 text-center">Page 20 Summary</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-4">
+            <li>Sadao shares the escape plan with Tom.</li>
+            <li>He secretly sets up a boat with supplies.</li>
+            <li>Hana is unaware, mentioning Yumi’s visit.</li>
+            <li>Sadao checks Tom, who is eager to leave.</li>
+            <li>Tom thanks Sadao for saving him twice.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold mb-2 text-gray-800 text-center">Tough Words</h3>
+          <ul class="list-disc pl-5 text-gray-700">
+            <li><strong>fathoms</strong>: Units of depth (about 6 feet)</li>
+            <li><strong>fortifying</strong>: Strengthening or securing</li>
+            <li><strong>submerged</strong>: Underwater</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 21: Page 21 Summary -->
+      <section id="slide-21" class="slide p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900 text-center">Page 21 Summary</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-4">
+            <li>Sadao gives Tom a flashlight for signaling.</li>
+            <li>Tom leaves silently via the boat.</li>
+            <li>Sadao later operates successfully on the General.</li>
+            <li>He tells the General Tom escaped, testing him.</li>
+            <li>The General admits forgetting assassins due to pain.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold mb-2 text-gray-800 text-center">Tough Words</h3>
+          <ul class="list-disc pl-5 text-gray-700">
+            <li><strong>hesitated</strong>: Paused or delayed</li>
+            <li><strong>sulphur</strong>: A chemical element</li>
+            <li><strong>irregular</strong>: Not regular or consistent</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 22: Page 22 Summary -->
+      <section id="slide-22" class="slide p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900 text-center">Page 22 Summary</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-4">
+            <li>The General confesses self-focus, not disloyalty.</li>
+            <li>Sadao ensures the General’s trust for safety.</li>
+            <li>No signal comes, confirming Tom’s escape.</li>
+            <li>Sadao recalls American experiences from study.</li>
+            <li>He reflects on the veranda where Tom appeared.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold mb-2 text-gray-800 text-center">Tough Words</h3>
+          <ul class="list-disc pl-5 text-gray-700">
+            <li><strong>dereliction</strong>: Neglect of duty</li>
+            <li><strong>zeal</strong>: Enthusiasm or passion</li>
+            <li><strong>twilighted</strong>: Dimly lit at dusk</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 23: Page 23 Summary -->
+      <section id="slide-23" class="slide p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900 text-center">Page 23 Summary</h2>
+          <ul class="list-disc pl-5 text-gray-700 mb-4">
+            <li>Sadao remembers prejudiced Americans from his past.</li>
+            <li>He questions why he couldn’t kill Tom.</li>
+            <li>The story ends with his moral dilemma unresolved.</li>
+            <li>Themes of duty, humanity, and war emerge.</li>
+            <li>Insight questions encourage deeper reflection.</li>
+          </ul>
+          <h3 class="text-2xl font-semibold mb-2 text-gray-800 text-center">Tough Words</h3>
+          <ul class="list-disc pl-5 text-gray-700">
+            <li><strong>prejudice</strong>: Unfair bias</li>
+            <li><strong>slatternly</strong>: Untidy or sloppy</li>
+            <li><strong>repulsive</strong>: Causing disgust</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 24: Character Sketches -->
+      <section id="slide-24" class="slide p-8 bg-white">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-3xl font-bold mb-6 text-gray-900 text-center">Character Sketches</h2>
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-2xl font-semibold text-gray-800 text-center">Dr. Sadao Hoki</h3>
+              <p class="text-gray-700 text-center">A skilled Japanese surgeon educated in America, torn between his duty to save lives and national loyalty, ultimately helping an enemy soldier escape.</p>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold text-gray-800 text-center">Hana</h3>
+              <p class="text-gray-700 text-center">Sadao’s supportive wife, compassionate yet conflicted, assists in caring for the prisoner despite societal pressure.</p>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold text-gray-800 text-center">Tom</h3>
+              <p class="text-gray-700 text-center">A young American POW, wounded and defiant, grateful to Sadao for saving his life, escaping to freedom.</p>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold text-gray-800 text-center">The General</h3>
+              <p class="text-gray-700 text-center">An influential patient of Sadao, self-absorbed and pragmatic, plans to eliminate Tom but forgets due to his own health crisis.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="fixed bottom-0 left-0 right-0 bg-white shadow-md p-4 flex justify-between">
+      <button id="prev-btn" class="px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed">Previous</button>
+      <button id="next-btn" class="px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed">Next</button>
+    </div>
+  </div>
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      // Hide all slides by removing the 'active' class
+      slides.forEach(slide => {
+        slide.classList.remove('active');
+        // Also ensure display is explicitly set to 'none' for non-active slides
+        // because the '.active' class now uses 'display: flex'.
+        slide.style.display = 'none';
+      });
+
+      // Show the target slide
+      const activeSlide = slides[index];
+      activeSlide.classList.add('active');
+      activeSlide.style.display = 'flex'; // Make sure it's displayed as a flex container
+
+      currentSlide = index;
+      document.getElementById('prev-btn').disabled = index === 0;
+      document.getElementById('next-btn').disabled = index === slides.length - 1;
+    }
+
+    // Initialize the first slide and button states
+    showSlide(0);
+
+    // Event listeners for navigation buttons
+    document.getElementById('prev-btn').addEventListener('click', () => {
+      if (currentSlide > 0) showSlide(currentSlide - 1);
+    });
+
+    document.getElementById('next-btn').addEventListener('click', () => {
+      if (currentSlide < slides.length - 1) showSlide(currentSlide + 1);
+    });
+
+    // Event listeners for top navigation links
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const slideIndex = parseInt(link.getAttribute('data-slide'));
+        showSlide(slideIndex);
+      });
+    });
+  </script>
+</body>
+</html>
