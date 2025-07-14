@@ -17,15 +17,21 @@
       color: #2c3e50;
     }
     .slide {
-      display: none; /* Hide all slides by default */
-      position: absolute;
-      inset: 0;
+      position: absolute; /* Allows slides to stack on top of each other */
+      inset: 0; /* Makes the slide cover the entire viewport */
       overflow-y: auto; /* Allow scrolling on long slides */
+      opacity: 0; /* Start invisible */
+      visibility: hidden; /* Start hidden from interaction and layout */
+      transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; /* Smooth fade transition */
+      display: flex; /* Use flexbox for centering content */
+      align-items: center; /* Center content vertically */
+      justify-content: center; /* Center content horizontally */
+      pointer-events: none; /* Prevent interaction when hidden */
     }
     .slide.active {
-      display: flex; /* Changed to flex for centering */
-      align-items: center; /* Center vertically */
-      justify-content: center; /* Center horizontally */
+      opacity: 1; /* Make visible */
+      visibility: visible; /* Make visible for interaction */
+      pointer-events: auto; /* Allow interaction when visible */
     }
   </style>
 </head>
@@ -545,20 +551,19 @@
       // Hide all slides by removing the 'active' class
       slides.forEach(slide => {
         slide.classList.remove('active');
-        // Also ensure display is explicitly set to 'none' for non-active slides
-        // because the '.active' class now uses 'display: flex'.
-        slide.style.display = 'none';
+        // The CSS transition handles the fading out.
+        // No need to manipulate display properties directly here anymore.
       });
 
-      // Show the target slide
+      // Show the target slide by adding the 'active' class
       const activeSlide = slides[index];
       activeSlide.classList.add('active');
-      activeSlide.style.display = 'flex'; // Make sure it's displayed as a flex container
 
       currentSlide = index;
       document.getElementById('prev-btn').disabled = index === 0;
       document.getElementById('next-btn').disabled = index === slides.length - 1;
     }
+      
 
     // Initialize the first slide and button states
     showSlide(0);
